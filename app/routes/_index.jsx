@@ -4,8 +4,8 @@ export default function Home() {
     return  (
         <div className="flex bg-[url('/bg.jpg')] scroll-x-hidden">
             <div className="flex flex-col w-screeen h-screen items-center justify-center gap-y-6">
-                <div className="w-32 h-32 rounded-full bg-pink-400"></div>
-                <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-pink-300">Fenny Oktaviani</h1>
+               <img src="/laptop.png" width={250} alt="" />
+                <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-pink-400">Fenny Oktaviani</h1>
                 <div className="flex text-lg gap-x-4">
                     <Link className="border border-white p-1 rounded-md hover:border-purple-600 hover:text-purple-600" to="/about">Education</Link>
                     <Link className="border border-white p-1 rounded-md hover:border-purple-600 hover:text-purple-600"  to="/#">Experience</Link>

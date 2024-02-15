@@ -124,7 +124,7 @@ __export(root_exports, {
 import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-64BDHOUD.css";
+var global_default = "/build/_assets/global-UWQK46HG.css";
 
 // app/root.jsx
 import { jsxDEV as jsxDEV2 } from "react/jsx-dev-runtime";
@@ -196,12 +196,12 @@ import { Link } from "@remix-run/react";
 import { jsxDEV as jsxDEV3 } from "react/jsx-dev-runtime";
 function Home() {
   return /* @__PURE__ */ jsxDEV3("div", { className: "flex bg-[url('/bg.jpg')] scroll-x-hidden", children: /* @__PURE__ */ jsxDEV3("div", { className: "flex flex-col w-screeen h-screen items-center justify-center gap-y-6", children: [
-    /* @__PURE__ */ jsxDEV3("div", { className: "w-32 h-32 rounded-full bg-pink-400" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV3("img", { src: "/laptop.png", width: 250, alt: "" }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
       lineNumber: 7,
-      columnNumber: 17
+      columnNumber: 16
     }, this),
-    /* @__PURE__ */ jsxDEV3("h1", { className: "text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-pink-300", children: "Fenny Oktaviani" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV3("h1", { className: "text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-pink-400", children: "Fenny Oktaviani" }, void 0, !1, {
       fileName: "app/routes/_index.jsx",
       lineNumber: 8,
       columnNumber: 17
@@ -258,7 +258,7 @@ function About() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-QRDE7KKD.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-GKXR4ZKQ.js", "/build/_shared/chunk-T7LDG7OJ.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-MKZEN6OW.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-UDSRTXKG.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-GQWXAOWJ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "f63ab5a5", hmr: { runtime: "/build/_shared/chunk-T7LDG7OJ.js", timestamp: 1707998804036 }, url: "/build/manifest-F63AB5A5.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-QRDE7KKD.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-GKXR4ZKQ.js", "/build/_shared/chunk-T7LDG7OJ.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-SLEPY5KV.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-SUUSH46D.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/about": { id: "routes/about", parentId: "root", path: "about", index: void 0, caseSensitive: void 0, module: "/build/routes/about-GQWXAOWJ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "0d7cda46", hmr: { runtime: "/build/_shared/chunk-T7LDG7OJ.js", timestamp: 1707999082963 }, url: "/build/manifest-0D7CDA46.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1, v3_throwAbortReason: !1 }, publicPath = "/build/", entry = { module: entry_server_node_exports }, routes = {

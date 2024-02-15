@@ -33,16 +33,16 @@ if (import.meta) {
     //@ts-expect-error
     "app/routes/_index.jsx"
   );
-  import.meta.hot.lastModified = "1707998803361.0515";
+  import.meta.hot.lastModified = "1707999082313.257";
 }
 function Home() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "flex bg-[url('/bg.jpg')] scroll-x-hidden", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "flex flex-col w-screeen h-screen items-center justify-center gap-y-6", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "w-32 h-32 rounded-full bg-pink-400" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("img", { src: "/laptop.png", width: 250, alt: "" }, void 0, false, {
       fileName: "app/routes/_index.jsx",
       lineNumber: 25,
-      columnNumber: 17
+      columnNumber: 16
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", { className: "text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-pink-300", children: "Fenny Oktaviani" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", { className: "text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-pink-400", children: "Fenny Oktaviani" }, void 0, false, {
       fileName: "app/routes/_index.jsx",
       lineNumber: 26,
       columnNumber: 17
@@ -91,4 +91,4 @@ window.$RefreshSig$ = prevRefreshSig;
 export {
   Home as default
 };
-//# sourceMappingURL=/build/routes/_index-UDSRTXKG.js.map
+//# sourceMappingURL=/build/routes/_index-SUUSH46D.js.map
