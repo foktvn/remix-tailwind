@@ -17,8 +17,7 @@ export default function App() {
         />
         <Links />
       </head>
-      <body>
-        <h1 className="flex w-screen h-screen items-center justify-center text-white bg-gray-800 text-4xl font-bold">Lets Try Remix</h1>
+      <body className="bg-gray-400 text-white w-screen h-full">
         <Outlet />
         <Scripts />
       </body>
