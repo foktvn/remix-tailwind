@@ -1,15 +1,15 @@
 import {
   Link
-} from "/build/_shared/chunk-GKXR4ZKQ.js";
+} from "/build/_shared/chunk-7RZFFSMX.js";
+import "/build/_shared/chunk-GIAAE3CH.js";
 import {
   createHotContext
 } from "/build/_shared/chunk-T7LDG7OJ.js";
+import "/build/_shared/chunk-UWV35TSL.js";
 import {
   require_jsx_dev_runtime
 } from "/build/_shared/chunk-XU7DNSPJ.js";
-import "/build/_shared/chunk-GIAAE3CH.js";
 import "/build/_shared/chunk-BOXFZXVX.js";
-import "/build/_shared/chunk-UWV35TSL.js";
 import {
   __toESM
 } from "/build/_shared/chunk-PNG5AS42.js";
@@ -33,10 +33,10 @@ if (import.meta) {
     //@ts-expect-error
     "app/routes/_index.jsx"
   );
-  import.meta.hot.lastModified = "1707999082313.257";
+  import.meta.hot.lastModified = "1708507961296.3135";
 }
 function Home() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "flex bg-[url('/bg.jpg')] scroll-x-hidden", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "flex flex-col w-screeen h-screen items-center justify-center gap-y-6", children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "flex flex-col bg-[url('/bg.jpg')] w-screen overflow-x-hidden", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "flex flex-col w-full h-screen items-center justify-center gap-y-6", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("img", { src: "/laptop.png", width: 250, alt: "" }, void 0, false, {
       fileName: "app/routes/_index.jsx",
       lineNumber: 25,
@@ -48,19 +48,19 @@ function Home() {
       columnNumber: 17
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "flex text-lg gap-x-4", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Link, { className: "border border-white p-1 rounded-md hover:border-purple-600 hover:text-purple-600", to: "/about", children: "Education" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Link, { className: "border border-white p-1 rounded-md hover:border-purple-600 hover:text-purple-600", to: "/education\n                    ", children: "Education" }, void 0, false, {
         fileName: "app/routes/_index.jsx",
         lineNumber: 28,
         columnNumber: 21
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Link, { className: "border border-white p-1 rounded-md hover:border-purple-600 hover:text-purple-600", to: "/#", children: "Experience" }, void 0, false, {
-        fileName: "app/routes/_index.jsx",
-        lineNumber: 29,
-        columnNumber: 21
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Link, { className: "border border-white p-1 rounded-md hover:border-purple-600 hover:text-purple-600", to: "/#", children: "Project" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Link, { className: "border border-white p-1 rounded-md hover:border-purple-600 hover:text-purple-600", to: "/experience", children: "Experience" }, void 0, false, {
         fileName: "app/routes/_index.jsx",
         lineNumber: 30,
+        columnNumber: 21
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Link, { className: "border border-white p-1 rounded-md hover:border-purple-600 hover:text-purple-600", to: "/project", children: "Project" }, void 0, false, {
+        fileName: "app/routes/_index.jsx",
+        lineNumber: 31,
         columnNumber: 21
       }, this)
     ] }, void 0, true, {
@@ -70,7 +70,7 @@ function Home() {
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { className: "font-bold text-center px-36", children: `"Passionate Junior Software Engineer with a zest for exploring diverse realms in the tech world. Currently immersed in Frontend development and QA, I'm eager to deepen my knowledge and skills further. Ready to embrace challenges, I constantly seek opportunities to learn and grow. \u{1F680}\u{1F4BB} #JuniorDev #WebDevelopmentExplorer #FrontendDev #QAEnthusiast"` }, void 0, false, {
       fileName: "app/routes/_index.jsx",
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 17
     }, this)
   ] }, void 0, true, {
@@ -91,4 +91,4 @@ window.$RefreshSig$ = prevRefreshSig;
 export {
   Home as default
 };
-//# sourceMappingURL=/build/routes/_index-SUUSH46D.js.map
+//# sourceMappingURL=/build/routes/_index-JYOPGX6W.js.map
