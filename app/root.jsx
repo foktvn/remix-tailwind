@@ -1,4 +1,4 @@
-import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
+import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import styles from "./styles/global.css";
 
 export const links= () => [
@@ -19,7 +19,9 @@ export default function App() {
       </head>
       <body className="bg-gray-400 text-white w-screen h-full">
         <Outlet />
+        <ScrollRestoration />
         <Scripts />
+        <LiveReload />
       </body>
     </html>
   );

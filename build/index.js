@@ -121,10 +121,10 @@ __export(root_exports, {
   default: () => App,
   links: () => links
 });
-import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
+import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-5JT2EH6W.css";
+var global_default = "/build/_assets/global-Y5KQT52K.css";
 
 // app/root.jsx
 import { jsxDEV as jsxDEV2 } from "react/jsx-dev-runtime";
@@ -170,9 +170,19 @@ function App() {
         lineNumber: 21,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ jsxDEV2(Scripts, {}, void 0, !1, {
+      /* @__PURE__ */ jsxDEV2(ScrollRestoration, {}, void 0, !1, {
         fileName: "app/root.jsx",
         lineNumber: 22,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV2(Scripts, {}, void 0, !1, {
+        fileName: "app/root.jsx",
+        lineNumber: 23,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV2(LiveReload, {}, void 0, !1, {
+        fileName: "app/root.jsx",
+        lineNumber: 24,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
@@ -218,20 +228,21 @@ function About() {
 // app/routes/project.jsx
 var project_exports = {};
 __export(project_exports, {
+  action: () => action,
   default: () => Poject
 });
 
 // app/components/form.jsx
 import { jsxDEV as jsxDEV5 } from "react/jsx-dev-runtime";
 function FormProject() {
-  return /* @__PURE__ */ jsxDEV5("form", { className: "flex flex-col items-start gap-y-6", method: "post", action: "/", children: [
+  return /* @__PURE__ */ jsxDEV5("form", { className: "flex flex-col items-start gap-y-6", method: "post", action: "/project", children: [
     /* @__PURE__ */ jsxDEV5("p", { className: "flex justify-center gap-4", children: [
       /* @__PURE__ */ jsxDEV5("label", { className: "text-xl", htmlFor: "project_name", children: "Nama Projek : " }, void 0, !1, {
         fileName: "app/components/form.jsx",
         lineNumber: 5,
         columnNumber: 17
       }, this),
-      /* @__PURE__ */ jsxDEV5("input", { className: "rounded-md bg-transparent border", type: "text", id: "project_name", name: "project_namr" }, void 0, !1, {
+      /* @__PURE__ */ jsxDEV5("input", { className: "rounded-md bg-transparent border", type: "text", id: "project_name", name: "project_name" }, void 0, !1, {
         fileName: "app/components/form.jsx",
         lineNumber: 6,
         columnNumber: 17
@@ -257,7 +268,7 @@ function FormProject() {
       lineNumber: 8,
       columnNumber: 13
     }, this),
-    /* @__PURE__ */ jsxDEV5("button", { className: "flex w-[300px] justify-center rounded-md bg-white text-gray-600 font-bold border border-gray-600 p-3", children: "Simpan" }, void 0, !1, {
+    /* @__PURE__ */ jsxDEV5("button", { className: "flex w-[450px] justify-center rounded-md bg-white text-gray-600 font-bold border border-gray-600 p-3", children: "Simpan" }, void 0, !1, {
       fileName: "app/components/form.jsx",
       lineNumber: 12,
       columnNumber: 13
@@ -269,34 +280,42 @@ function FormProject() {
   }, this);
 }
 
+// app/data/project.js
+import fs from "fs/promises";
+async function getStoreProject() {
+  let rawFileContents = await fs.readFile("project.json", { encoding: "utf-8" });
+  return JSON.parse(rawFileContents).project ?? [];
+}
+function storeProject(project) {
+  return fs.writeFile("note.json", JSON.stringify({ project: project || [] }));
+}
+
 // app/routes/project.jsx
+import { redirect } from "@remix-run/react";
 import { jsxDEV as jsxDEV6 } from "react/jsx-dev-runtime";
 function Poject() {
-  return /* @__PURE__ */ jsxDEV6("div", { className: "flex flex-col w-screen h-screen items-center p-6 gap-y-8", children: [
+  return /* @__PURE__ */ jsxDEV6("div", { className: "flex flex-col w-screen h-screen p-6 gap-y-8 overflow-x-hidden", children: [
     /* @__PURE__ */ jsxDEV6("h1", { className: "text-3xl font-bold", children: "Masukan project baru anda" }, void 0, !1, {
       fileName: "app/routes/project.jsx",
-      lineNumber: 6,
+      lineNumber: 8,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ jsxDEV6(FormProject, {}, void 0, !1, {
       fileName: "app/routes/project.jsx",
-      lineNumber: 7,
-      columnNumber: 13
-    }, this),
-    /* @__PURE__ */ jsxDEV6("div", { className: "grid grid-cols-3", children: /* @__PURE__ */ jsxDEV6("div", { className: "w-full h-[500px] bg-white rounded-md" }, void 0, !1, {
-      fileName: "app/routes/project.jsx",
       lineNumber: 9,
-      columnNumber: 17
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/project.jsx",
-      lineNumber: 8,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/project.jsx",
-    lineNumber: 5,
+    lineNumber: 7,
     columnNumber: 9
   }, this);
+}
+async function action({ request }) {
+  let formData = await request.formData(), projectData = Object.fromEntries(formData), existingProject = await getStoreProject();
+  projectData.id = (/* @__PURE__ */ new Date()).toISOString();
+  let updateProject = existingProject.concat(projectData);
+  return await storeProject(updateProject), redirect("/project");
 }
 
 // app/routes/_index.jsx
@@ -357,7 +376,7 @@ function Home() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-77JTSYED.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-7RZFFSMX.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-T7LDG7OJ.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-XSWXSGDC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-JYOPGX6W.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/education": { id: "routes/education", parentId: "root", path: "education", index: void 0, caseSensitive: void 0, module: "/build/routes/education-DYHLUSB2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/experience": { id: "routes/experience", parentId: "root", path: "experience", index: void 0, caseSensitive: void 0, module: "/build/routes/experience-BVETSITF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/project": { id: "routes/project", parentId: "root", path: "project", index: void 0, caseSensitive: void 0, module: "/build/routes/project-OZQC5OPC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "c64f6331", hmr: { runtime: "/build/_shared/chunk-T7LDG7OJ.js", timestamp: 1708511262467 }, url: "/build/manifest-C64F6331.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-77JTSYED.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-7RZFFSMX.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-T7LDG7OJ.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-Z2PYTOJP.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-JYOPGX6W.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/education": { id: "routes/education", parentId: "root", path: "education", index: void 0, caseSensitive: void 0, module: "/build/routes/education-DYHLUSB2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/experience": { id: "routes/experience", parentId: "root", path: "experience", index: void 0, caseSensitive: void 0, module: "/build/routes/experience-BVETSITF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/project": { id: "routes/project", parentId: "root", path: "project", index: void 0, caseSensitive: void 0, module: "/build/routes/project-PFKUWO4S.js", imports: void 0, hasAction: !0, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "24692a8b", hmr: { runtime: "/build/_shared/chunk-T7LDG7OJ.js", timestamp: 1708597985182 }, url: "/build/manifest-24692A8B.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1, v3_throwAbortReason: !1 }, publicPath = "/build/", entry = { module: entry_server_node_exports }, routes = {

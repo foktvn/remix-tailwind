@@ -1,8 +1,10 @@
 import {
   Links,
+  LiveReload,
   Meta,
   Outlet,
-  Scripts
+  Scripts,
+  ScrollRestoration
 } from "/build/_shared/chunk-7RZFFSMX.js";
 import "/build/_shared/chunk-GIAAE3CH.js";
 import {
@@ -18,7 +20,7 @@ import {
 } from "/build/_shared/chunk-PNG5AS42.js";
 
 // app/styles/global.css
-var global_default = "/build/_assets/global-5JT2EH6W.css";
+var global_default = "/build/_assets/global-Y5KQT52K.css";
 
 // app/root.jsx
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime(), 1);
@@ -73,9 +75,19 @@ function App() {
         lineNumber: 35,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Scripts, {}, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(ScrollRestoration, {}, void 0, false, {
         fileName: "app/root.jsx",
         lineNumber: 36,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Scripts, {}, void 0, false, {
+        fileName: "app/root.jsx",
+        lineNumber: 37,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(LiveReload, {}, void 0, false, {
+        fileName: "app/root.jsx",
+        lineNumber: 38,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
@@ -98,4 +110,4 @@ export {
   App as default,
   links
 };
-//# sourceMappingURL=/build/root-XSWXSGDC.js.map
+//# sourceMappingURL=/build/root-Z2PYTOJP.js.map
